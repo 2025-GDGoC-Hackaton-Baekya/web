@@ -26,6 +26,7 @@ const Mymypage = () => {
       >
         <div className="text">내 이력서</div>
         <GoChevronRight className="icon" />
+    
       </div>
     </div>
   );
