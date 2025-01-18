@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Modal from "../modal/modal";
+import Modal from "../modal/modal.tsx";
 
-// Styled Components
 const ButtonContainer = styled.div`
   display: flex;
   gap: 15px;
@@ -14,23 +13,39 @@ const ButtonContainer = styled.div`
 const Button = styled.button`
   border: none;
   cursor: pointer;
-  background-color: white;
-  color: black;
+  background-color: royalblue;
+  color: white;
   font-weight: bold;
   flex: 1;
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 16px;
-  transition: color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s;
 
   &:hover {
-    color: red;
+    background-color: #0056b3;
     transform: scale(1.05);
   }
 
   &:active {
-    color: lightgray;
+    background-color: #003d80;
     transform: scale(0.95);
+  }
+`;
+
+const AddButton = styled(Button)`
+  width: auto;
+  padding: 3px 30px;
+  background-color: royalblue;
+  border-radius: 10px; 
+  font-size: 18px;
+
+  &:hover {
+    background-color: rgb(49, 147, 251);
+  }
+
+  &:active {
+    background-color:rgb(6, 126, 255);
   }
 `;
 
@@ -71,7 +86,8 @@ const Resume: React.FC = () => {
       <h1>Resume</h1>
       <p>소개 화면 입니다.</p>
 
-      <Button onClick={openModal}>경력 추가</Button>
+      {/* 경력 추가 버튼 */}
+      <AddButton onClick={openModal}>경력 추가</AddButton>
 
       <Modal
         isOpen={isModalOpen}
