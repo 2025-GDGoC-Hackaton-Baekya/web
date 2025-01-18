@@ -6,13 +6,13 @@ import "../scss/Profile.scss";
 const Profile = () => {
     const { id } = useParams(); 
     const [profile, setProfile] = useState({
-        id: "",
-        name: "",
+        id: "1",
+        name: "이예찬",
         gender: "MALE",
-        age: "",
-        birth: "",
-        phone: "",
-        email: "",
+        age: "20",
+        birth: "2025-01-19",
+        phone: "010-0000-0000",
+        email: "yeach@naver.com",
     });
 
     const [loading, setLoading] = useState(true);
@@ -20,7 +20,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await axios.get(`http://3.34.233.19/api/users/1`); 
+                const response = await axios.get(`http://3.34.233.19/api/users`); 
                 setProfile(response.data);
                 setLoading(false);
             } catch (error) {
@@ -41,7 +41,7 @@ const Profile = () => {
 
     const handleSubmit = async () => {
         try {
-            const response = await axios.put(`http://3.34.233.19/api/users/1`, profile); 
+            const response = await axios.put(`http://3.34.233.19/api/users/1`); 
             console.log("수정 성공:", response.data);
             alert("프로필이 성공적으로 저장되었습니다!");
         } catch (error) {
