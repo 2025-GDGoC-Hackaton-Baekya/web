@@ -14,7 +14,7 @@ function Gohome(props: Props) {
     color: props.color,
     margin: props.margin,
     fontSize: props.fontSize,
-    value: props.value  
+    value: props.value
   };
 
   return (
