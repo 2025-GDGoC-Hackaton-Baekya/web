@@ -1,0 +1,29 @@
+.mypage {
+    .title {
+      font-size: 2rem;
+      margin-top: 4vh;
+      margin-left: 10vw;
+      margin-bottom: 5vh;
+    }
+  
+    .navigation {
+      border-bottom: 0.5px solid #bfbaba;
+      margin-top: 2vh;
+      margin-left: 10vw;
+      width: 75%;
+      padding: 12px;
+      display: flex;
+  
+      .text {
+        width: 95%;
+      }
+  
+      .icon {
+        color: gray;
+        cursor: pointer;
+      }
+    }
+    
+  }
+
+  
