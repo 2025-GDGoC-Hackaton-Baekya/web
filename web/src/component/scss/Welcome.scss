@@ -1,0 +1,63 @@
+@keyframes softWave {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    25% {
+      transform: translateY(-15px) scale(1.05);
+    }
+    50% {
+      transform: translateY(0) scale(1);
+    }
+    75% {
+      transform: translateY(15px) scale(1.05);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .welcome-content {
+      text-align: center;
+      position: relative;
+
+      div {
+        animation: softWave 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        transform-origin: center;
+
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+
+      .start-button {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+        margin-top: 2rem;
+        padding: 0.8em 2em;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1em;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      &:hover .start-button {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+  }
