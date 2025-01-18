@@ -18,9 +18,8 @@ function App() {
           <Route path="/notice" element={<Notice />} />
           <Route path="/gohome" element={<Gohome color="blue" margin="0.5em" fontSize="2"/>} />
           <Route path="/mypage" element={<Mymypage />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/:id" element={<Profile />} />
           <Route path="/home" element={<Home />} />
-
         </Routes>
         <Footer />
       </div>
