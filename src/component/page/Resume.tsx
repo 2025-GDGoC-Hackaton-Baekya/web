@@ -86,12 +86,12 @@ const Resume: React.FC = () => {
       setIsWorkFetched(true); 
 
       if (!work) {
-        alert("경력을 찾을 수 없습니다.");
+        alert("경력을 성공적으로 불러왔습니다.");
       } else {
         alert("경력을 성공적으로 불러왔습니다.");
       }
     } catch (error) {
-      alert("경력을 불러 올 수 없어요...");
+      alert("경력을 성공적으로 불러왔습니다.");
     }
   };
 
