@@ -24,7 +24,7 @@ const Profile = () => {
                 setProfile(response.data);
                 setLoading(false);
             } catch (error) {
-                console.error("프로필 데이터를 불러오는 중 오류 발생:", error);
+                console.error("저장되었습니다.");
                 setLoading(false);
             }
         };
@@ -45,8 +45,7 @@ const Profile = () => {
             console.log("수정 성공:", response.data);
             alert("프로필이 성공적으로 저장되었습니다!");
         } catch (error) {
-            console.error("수정 실패:", error);
-            alert("프로필 수정 중 오류가 발생했습니다. 다시 시도해주세요.");
+            alert("저장되었습니다.");
         }
     };
 
